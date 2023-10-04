@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { saveJobApplication } from '../../utility/localStorage';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -17,6 +18,9 @@ const JobDetails = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Job Details: {job.job_title}</title>
+            </Helmet>
             <div className='grid md:grid-cols-4 gap-4'>
                 <div className='border md:col-span-3'>
                     <h2>Details coming here</h2>
